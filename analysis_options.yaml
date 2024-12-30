@@ -1,27 +1,42 @@
-
 # The analysis_options.yaml file is used to configure the Dart analyzer.
-# You can define rules for linting, code style, and more.
 # For more information on configuring the analyzer, visit:
 # https://dart.dev/guides/language/analysis-options
 
-include:
-  - package:lint/analysis_options.yaml # Use the lint package for recommended rules
+# Include recommended lints for Flutter projects
+include: package:flutter_lints/flutter.yaml
 
-# Customize your own rules below as needed.
+analyzer:
+  exclude:
+    - build/**  # Exclude generated build files
+    - .dart_tool/**  # Exclude Dart tool cache
+    - example/**/generated_plugin_registrant.dart  # Exclude generated plugin files
+
 linter:
   rules:
-    # Enforce some best practices for clean code
+    # General best practices
     always_declare_return_types: true  # Ensure all functions have explicit return types
     avoid_print: true  # Avoid using print statements in production code
     prefer_final_locals: true  # Prefer using `final` for local variables
-    avoid_redundant_argument_types: true  # Avoid redundant argument types in function signatures
-    sort_constructors_first: true  # Ensure constructors are declared before other methods in classes
-    public_member_api_docs: true  # Enforce doc comments for public members
+    prefer_typing_uninitialized_variables: true  # Ensure variables are properly initialized with types
+
+    # Flutter-specific rules
+    prefer_const_constructors: true  # Use const constructors where possible
+    use_key_in_widget_constructors: true  # Add key parameters to custom widgets
+
+    # Code structure and readability
+    sort_constructors_first: true  # Ensure constructors are declared before other methods
     unnecessary_getters_setters: true  # Avoid unnecessary getter/setter methods
-    prefer_const_constructors: true  # Prefer const constructors where possible
-    prefer_typing_uninitialized_variables: true  # Ensure variables are properly initialized with their types
 
-# You can add custom lints or overrides if needed
-# Example:
-#   - always_declare_return_types: false
+    # Documentation and API usage
+    public_member_api_docs: true  # Enforce doc comments for public members
+    slash_for_doc_comments: true  # Use /// for documentation comments
 
+    # Optimization and style
+    prefer_const_literals_to_create_immutables: true  # Prefer const literals for lists, maps, etc.
+    prefer_final_in_for_each: true  # Use final in for-each loop declarations
+    omit_local_variable_types: false  # Explicitly define types for local variables
+
+    # Miscellaneous
+    avoid_classes_with_only_static_members: true  # Avoid classes with only static members
+    avoid_redundant_argument_values: true  # Avoid passing default values explicitly
+    unnecessary_null_checks: true  # Avoid unnecessary null checks
