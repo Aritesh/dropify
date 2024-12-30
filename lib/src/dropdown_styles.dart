@@ -19,9 +19,10 @@ class DropifyStyles {
           color: Colors.deepPurple.shade50,
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
-            BoxShadow(
+            const BoxShadow(
               blurRadius: 8,
-              color: Colors.deepPurple.withOpacity(0.2),
+              color: Color.fromRGBO(
+                  128, 0, 128, 0.2), // Deep purple color with 20% opacity
             ),
           ],
         );
@@ -30,9 +31,10 @@ class DropifyStyles {
           color: Colors.brown.shade100,
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
-            BoxShadow(
+            const BoxShadow(
               blurRadius: 6,
-              color: Colors.brown.withOpacity(0.4),
+              color: Color.fromRGBO(
+                  165, 42, 42, 0.4), // Brown color with 40% opacity
             ),
           ],
         );
