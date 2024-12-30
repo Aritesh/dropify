@@ -1,6 +1,6 @@
 name: dropify
 description: A customizable dropdown menu button for Flutter with multiple features (search, dynamic data, and various styles).
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/Aritesh/dropify.git
 
 environment:
