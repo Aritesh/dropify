@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dropdown_menu.dart';
-import 'dropdown_styles.dart';
 
 class DropifyDropdownButton<T> extends StatelessWidget {
   final List<T> data;
@@ -12,7 +11,8 @@ class DropifyDropdownButton<T> extends StatelessWidget {
     required this.data,
     required this.itemLabel,
     required this.onItemSelected,
-    this.designStyle = 'material', // Default to material style
+    this.designStyle = 'material',
+    required bool searchEnabled, // Default to material style
   });
 
   @override
