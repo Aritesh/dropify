@@ -1,0 +1,27 @@
+
+# The analysis_options.yaml file is used to configure the Dart analyzer.
+# You can define rules for linting, code style, and more.
+# For more information on configuring the analyzer, visit:
+# https://dart.dev/guides/language/analysis-options
+
+include:
+  - package:lint/analysis_options.yaml # Use the lint package for recommended rules
+
+# Customize your own rules below as needed.
+linter:
+  rules:
+    # Enforce some best practices for clean code
+    always_declare_return_types: true  # Ensure all functions have explicit return types
+    avoid_print: true  # Avoid using print statements in production code
+    prefer_final_locals: true  # Prefer using `final` for local variables
+    avoid_redundant_argument_types: true  # Avoid redundant argument types in function signatures
+    sort_constructors_first: true  # Ensure constructors are declared before other methods in classes
+    public_member_api_docs: true  # Enforce doc comments for public members
+    unnecessary_getters_setters: true  # Avoid unnecessary getter/setter methods
+    prefer_const_constructors: true  # Prefer const constructors where possible
+    prefer_typing_uninitialized_variables: true  # Ensure variables are properly initialized with their types
+
+# You can add custom lints or overrides if needed
+# Example:
+#   - always_declare_return_types: false
+
