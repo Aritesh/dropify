@@ -38,7 +38,7 @@ To get started with **Dropify**, add the following dependency in your `pubspec.y
 
 ```yaml
 dependencies:
-  dropify: ^0.0.1
+  dropify: ^0.0.2
 
   Run the following command in the terminal to install the package:
 
